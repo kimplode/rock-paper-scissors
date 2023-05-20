@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Montserrat:wght@500&family=Orbitron&family=Titillium+Web&display=swap');
+body {
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+div {
+    padding: 10px;
+    margin: 0 auto;
+    width: 70%;
+}
+#result {
+    background-color: #000;
+    color: #FFF;
+    font-size: 12px;
+}
+#select {
+    font-family: "Titillium Web", sans-serif;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+#opponents {
+    display: flex;
+    flex-direction: row;
+}
+.challenger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.challenger img {
+    width: 200px;
+    border-radius: 10px;
+}
+.challenger h2 {
+    font-family: "Alkatra", sans-serif;
+    line-height: 80%;
+}
+#weapon-selection button {
+    font-family: "Orbitron";
+    font-weight: bold;
+    background-color: #000;
+    color:darkgreen;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+}

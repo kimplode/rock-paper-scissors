@@ -5,177 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors Game</title>
+    <title>Fallout 76 Themed Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <script>
-        // function should return Rock, Paper, or Scissors randomly.
-        // let computerSelection = function getComputerChoice() {
-        //     let options = ["rock", "paper", "scissors"];
-        //     let selection = options[Math.floor(Math.random() * options.length)];
-        //     return (selection);
-        // }
+<div id="game">
+    <h1>Wasteland</h1>
+    <h2>Rock, Paper, Scissors</h2>
+    <span id="description">Play five rounds of the classic "Rock, Paper, Scissors" against a post-apocalyptic wasteland robot.</span>
+    </div>
 
-        // let userChoice = window.prompt("Please choose your weapon: Rock, Paper, or Scissors");
-        // // Function that converts users input to lowercase.
-        // const playerSelection = userChoice.toLowerCase();
-
-        //function playerSelection(userChoice) {
-        //    return userChoice.toLowerCase();
-        //}
-
-
-        //function that compares the values
-
-        // function determineWinner(a, b) {
-
-
-        //     if (a == "rock" && b == "scissors") {
-        //         return "You win! Rock beats Scissors";
-        //     }
-        //     else if (a == "rock" && b == "paper") {
-        //         return "You lose! Paper beats Rock";
-        //     }
-        //     else if (a == "scissors" && b == "paper") {
-        //         return "You win! Scissors beats Paper";
-        //     }
-        //     else if (a == "scissors" && b == "rock") {
-        //         return "You lose! Rock beats Scissors";
-        //     }
-        //     else if (a == "paper" && b == "rock") {
-        //         return "You win! Paper beats Rock";
-        //     }
-        //     else if (a == "paper" && b == "scissors") {
-        //         return "You lose! Scissors beats Paper";
-        //     }
-        //     else if (a == "rock" && b == "rock") {
-        //         return "It was a draw.";
-        //     }
-        //     else if (a == "paper" && b == "paper") {
-        //         return "It was a draw.";
-        //     }
-        //     else if (a == "scissors" && b == "scissors") {
-        //         return "It was a draw.";
-        //     }
-        // };
-
-            // function determineWinner(a, b) {
-
-
-            //     if (a == "rock" && b == "scissors") {
-            //         return "user";
-            //     }
-            //     else if (a == "rock" && b == "paper") {
-            //         return "computer";
-            //     }
-            //     else if (a == "scissors" && b == "paper") {
-            //         return "user";
-            //     }
-            //     else if (a == "scissors" && b == "rock") {
-            //         return "computer";
-            //     }
-            //     else if (a == "paper" && b == "rock") {
-            //         return "user";
-            //     }
-            //     else if (a == "paper" && b == "scissors") {
-            //         return "computer";
-            //     }
-            //     else if (a == "rock" && b == "rock") {
-            //         return "draw";
-            //     }
-            //     else if (a == "paper" && b == "paper") {
-            //         return "draw";
-            //     }
-            //     else if (a == "scissors" && b == "scissors") {
-            //         return "draw";
-            //     }
-            // };
-
-                function determineWinner(playerSelection, computerSelection) {
-
-
-                        if (playerSelection == "rock" && computerSelection == "scissors") {
-                            return "user";
-                        }
-                        else if (playerSelection === "rock" && computerSelection === "paper") {
-                            return "computer";
-                        }
-                        else if (playerSelection == "scissors" && computerSelection == "paper") {
-                            return "user";
-                        }
-                        else if (playerSelection == "scissors" && computerSelection == "rock") {
-                            return "computer";
-                        }
-                        else if (playerSelection == "paper" && computerSelection == "rock") {
-                            return "user";
-                        }
-                        else if (playerSelection == "paper" && computerSelection == "scissors") {
-                            return "computer";
-                        }
-                        else if (playerSelection == "rock" && computerSelection == "rock") {
-                            return "draw";
-                        }
-                        else if (playerSelection == "paper" && computerSelection == "paper") {
-                            return "draw";
-                        }
-                        else if (playerSelection == "scissors" && computerSelection == "scissors") {
-                            return "draw";
-                        }
-                    };
-
-        //Write a function that plays a single round of Rock Paper Scissors.
-        //The function should take two parameters - the playerSelection and computerSelection -
-        //and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
-
-
-                function playRound() {
-
-                    let userChoice = window.prompt("Please choose your weapon: Rock, Paper, or Scissors");
-
-                    // Function that converts users input to lowercase.
-                    const playerSelection = userChoice.toLowerCase();
-
-
-                    let computerSelection = function getComputerChoice() {
-                        let options = ["rock", "paper", "scissors"];
-                        let selection = options[Math.floor(Math.random() * options.length)];
-                        return (selection);
-                    }
-
-                    return determineWinner(playerSelection, computerSelection());
-                };
-
-        // Write a NEW function called game(). Call the playRound function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
-
-        function game() {
-            let userScore = 0;
-            let computerScore = 0;
-
-            for (let i = 1; i <= 5; i++) {
-                const winner = playRound();
-
-                    if (winner == "user") {
-                        console.log("You win!", i)
-                        userScore++;
-                    }
-                        else if (winner == "computer") {
-                            computerScore++;
-                            console.log("You lose, try again", i)
-                        }  else {
-                            console.log("It was a draw! Do over.", i)
-                            i--;
-
-                        }
-               }
-               console.log("user wins:", userScore, "computer wins:", computerScore);
-        };
-
-        // console.log("User:", playerSelection, "Computer:", computerSelection(), playRound());
-
-        game();
-
-    </script>
+    <div>
+        <h2>Select an opponent:</h2>
+        <div id="opponents">
+        <div class="challenger">
+          <img src="insult.jpg" alt="Insult Bot" id="opponent1">
+          <h2>Insult Bot</h2>
+          </div>
+        <div class="challenger">
+          <img src="biv.jpg" alt="Biv" id="opponent2">
+          <h2>Biv</h2>
+          </div>
+          <div class="challenger">
+          <img src="modus.jpg" alt="MODUS" id="opponent3">
+          <h2>MODUS</h2>
+        </div>
+        </div>
+    </div>
+    <div id="weapon-selection">
+    <span id="select">Make a Selection:</span><br>
+    <button id="rock">ROCK</button>
+    <button id="paper">PAPER</button>
+    <button id="scissors">SCISSORS</button>
+</div>
+<div id="result"></div>
+<div id="scoreboard">
+    User Score: <span id="user-score">0</span><br>
+    Computer Score: <span id="computer-score">0</span>
+    <br>
+    <button id="reset-score">Reset Score</button>
+</div>
+<script src="script.js"></script>
 </body>
-
 </html>
